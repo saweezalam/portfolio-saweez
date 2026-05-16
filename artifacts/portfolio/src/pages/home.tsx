@@ -25,9 +25,15 @@ import { Badge } from "@/components/ui/badge";
 import {
   RoadTechThumbnail,
   AppraisalThumbnail,
+  VqcThumbnail,
   EngelVolkersThumbnail,
   NetstreitThumbnail,
-  NovoNordiskThumbnail
+  TurfMuttThumbnail,
+  NrpGroupThumbnail,
+  LitteratiThumbnail,
+  NbpFundsThumbnail,
+  AblFundsThumbnail,
+  AdamjeeThumbnail
 } from "@/components/project-thumbnails";
 import profilePhoto from "@assets/DSC_6868_1778927043028.JPG";
 
@@ -299,77 +305,158 @@ export default function Home() {
             <p className="text-muted-foreground text-lg max-w-xl">A showcase of enterprise dashboards, custom design systems, and complex frontends.</p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          {/* Featured project — full width */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeInUp}
+            className="mb-8"
+          >
+            <a href="https://rtadmin.roadtechconnect.com/" target="_blank" rel="noreferrer" className="block">
+              <Card className="group overflow-hidden bg-card/30 border-white/5 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,180,216,0.12)] cursor-pointer">
+                <CardContent className="p-0 flex flex-col lg:flex-row h-full">
+                  <div className="lg:w-2/3 h-64 lg:h-80 relative overflow-hidden">
+                    <div className="absolute inset-0 scale-100 group-hover:scale-105 transition-transform duration-700"><RoadTechThumbnail /></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background opacity-40 lg:opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80 lg:opacity-0" />
+                  </div>
+                  <div className="lg:w-1/3 p-8 flex flex-col justify-center relative">
+                    <Badge variant="outline" className="w-fit mb-4 text-primary border-primary/40">Featured Project</Badge>
+                    <h3 className="text-2xl font-bold font-display mb-3 group-hover:text-primary transition-colors">RoadTech Dashboard Portal</h3>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">Monorepo architecture with Admin, OEM, and Dealer portals for an automotive equipment management platform.</p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {["React.js","TypeScript","Material UI","SCSS","Monorepo"].map((t, j) => (
+                        <Badge key={j} variant="secondary" className="bg-secondary/40">{t}</Badge>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-primary font-medium">
+                      <ExternalLink className="w-4 h-4" /> View Project
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
+          </motion.div>
+
+          {/* 3-column grid for remaining projects */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "RoadTech Dashboard Portal",
-                desc: "Monorepo architecture with Admin, OEM, and Dealer portals for an automotive equipment management platform.",
-                tech: ["React.js", "TypeScript", "Material UI", "SCSS"],
-                featured: true,
-                Thumbnail: RoadTechThumbnail
+                title: "VQC — NAN AI",
+                desc: "AI-powered visual quality control platform for automated defect detection and analysis.",
+                tech: ["React.js", "TypeScript", "AI/ML"],
+                url: "https://vqc.nan-ai.com/",
+                Thumbnail: VqcThumbnail
               },
               {
                 title: "Home Appraisal System",
-                desc: "Performance optimized SPA for real estate appraisal review and management.",
+                desc: "Performance-optimized Angular SPA for real estate appraisal review and management.",
                 tech: ["Angular", "MUI", "SCSS"],
-                featured: false,
+                url: null,
                 Thumbnail: AppraisalThumbnail
               },
               {
                 title: "Engel & Völkers",
-                desc: "Custom design system and responsive frontend for global real estate platform.",
-                tech: ["Next.js", "Styled Components"],
-                featured: false,
+                desc: "Custom design system and responsive frontend for a global luxury real estate brand.",
+                tech: ["Next.js", "Styled Components", "Next Image"],
+                url: "https://www.evrealestate.com/en",
                 Thumbnail: EngelVolkersThumbnail
               },
               {
                 title: "NETSTREIT",
-                desc: "Mobile-first real estate frontend with complex data visualizations.",
-                tech: ["React.js", "Gatsby", "Bootstrap"],
-                featured: false,
+                desc: "Mobile-first REIT platform with property portfolio, investor relations, and responsive layouts.",
+                tech: ["React.js", "Gatsby", "Bootstrap", "SCSS"],
+                url: "https://netstreit.com/",
                 Thumbnail: NetstreitThumbnail
               },
               {
-                title: "Novo Nordisk Sample Management",
-                desc: "Healthcare dashboard interfaces for sample management systems.",
-                tech: ["React.js", "Bootstrap"],
-                featured: false,
-                Thumbnail: NovoNordiskThumbnail
-              }
-            ].map((project, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={fadeInUp}
-                className={project.featured ? "lg:col-span-2" : ""}
-              >
-                <Card className="group h-full overflow-hidden bg-card/30 border-white/5 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] cursor-pointer">
-                  <CardContent className="p-0 flex flex-col h-full">
-                    <div className={`bg-muted/20 w-full relative overflow-hidden ${project.featured ? 'h-64 lg:h-96' : 'h-56'}`}>
-                      <div className="absolute inset-0 scale-100 group-hover:scale-105 transition-transform duration-700">
-                        <project.Thumbnail />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
-                    </div>
-                    <div className="p-8 relative flex-1 flex flex-col">
-                      <div className="absolute top-0 right-8 -translate-y-1/2 w-12 h-12 bg-background border border-border rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:-translate-y-3/4 transition-all duration-300 shadow-xl">
-                        <ExternalLink className="w-5 h-5 text-primary" />
-                      </div>
-                      <h3 className="text-2xl font-bold font-display mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
-                      <p className="text-muted-foreground mb-6 flex-1">{project.desc}</p>
-                      <div className="flex flex-wrap gap-2 mt-auto">
-                        {project.tech.map((t, j) => (
-                          <Badge key={j} variant="secondary" className="bg-secondary/40 text-secondary-foreground">{t}</Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                title: "TurfMutt",
+                desc: "Community platform connecting dog owners with parks, events, and outdoor activities.",
+                tech: ["React.js", "Bootstrap", "SCSS"],
+                url: "https://www.turfmutt.com/",
+                Thumbnail: TurfMuttThumbnail
+              },
+              {
+                title: "NRP Group",
+                desc: "Enterprise website for a leading affordable housing and real estate development group.",
+                tech: ["React.js", "WordPress", "SCSS"],
+                url: "https://nrpgroup.com/",
+                Thumbnail: NrpGroupThumbnail
+              },
+              {
+                title: "Litterati",
+                desc: "Global citizen-science platform for tracking and eliminating litter with community impact data.",
+                tech: ["React.js", "SCSS", "Bootstrap"],
+                url: "https://www.litterati.org/",
+                Thumbnail: LitteratiThumbnail
+              },
+              {
+                title: "NBP Funds",
+                desc: "Mutual fund investment platform with NAV tracking, portfolio management and fund performance.",
+                tech: ["React.js", "WordPress", "ACF"],
+                url: "https://www.nbpfunds.com/",
+                Thumbnail: NbpFundsThumbnail
+              },
+              {
+                title: "ABL Asset Management",
+                desc: "Digital investment platform for ABL mutual funds with fund listings and performance data.",
+                tech: ["React.js", "SCSS", "Bootstrap"],
+                url: "https://www.ablfunds.com/",
+                Thumbnail: AblFundsThumbnail
+              },
+              {
+                title: "Adamjee Life Insurance",
+                desc: "Insurance product showcase with policy management features and customer-facing digital experience.",
+                tech: ["React.js", "Bootstrap", "SCSS"],
+                url: "https://www.adamjeelife.com/",
+                Thumbnail: AdamjeeThumbnail
+              },
+            ].map((project, i) => {
+              const CardWrapper = project.url
+                ? ({ children }: { children: React.ReactNode }) => (
+                    <a href={project.url!} target="_blank" rel="noreferrer" className="block h-full" data-testid={`link-project-${i}`}>{children}</a>
+                  )
+                : ({ children }: { children: React.ReactNode }) => <div className="h-full">{children}</div>;
+
+              return (
+                <motion.div
+                  key={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-40px" }}
+                  variants={fadeInUp}
+                  className="h-full"
+                >
+                  <CardWrapper>
+                    <Card className="group h-full overflow-hidden bg-card/30 border-white/5 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_24px_rgba(0,180,216,0.1)] cursor-pointer">
+                      <CardContent className="p-0 flex flex-col h-full">
+                        <div className="h-44 relative overflow-hidden">
+                          <div className="absolute inset-0 scale-100 group-hover:scale-105 transition-transform duration-700">
+                            <project.Thumbnail />
+                          </div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-75 group-hover:opacity-50 transition-opacity duration-500" />
+                          {project.url && (
+                            <div className="absolute top-3 right-3 w-8 h-8 bg-background/80 backdrop-blur-sm border border-border rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <ExternalLink className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                          )}
+                        </div>
+                        <div className="p-5 flex flex-col flex-1">
+                          <h3 className="text-lg font-bold font-display mb-2 group-hover:text-primary transition-colors leading-tight">{project.title}</h3>
+                          <p className="text-muted-foreground text-sm mb-4 flex-1 leading-relaxed">{project.desc}</p>
+                          <div className="flex flex-wrap gap-1.5 mt-auto">
+                            {project.tech.map((t, j) => (
+                              <Badge key={j} variant="secondary" className="bg-secondary/40 text-xs">{t}</Badge>
+                            ))}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CardWrapper>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
