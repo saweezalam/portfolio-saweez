@@ -175,7 +175,7 @@ export default function Home() {
             >
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-8">Engineering with <br/><span className="text-muted-foreground">design intent.</span></h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                With 8+ years of experience, I specialize in translating complex Figma designs into responsive, accessible, and performant interfaces. My work revolves around component architecture, design systems, and frontend optimization using React, Next.js, and Angular.
+                With 8+ years of experience, I specialize in translating complex Figma designs into responsive, accessible, and performant interfaces. My work revolves around component architecture, design systems, and frontend optimization using React and Next.js.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 I believe in Apple-level restraint meeting Silicon Valley confidence. A great interface doesn't just work — it feels right. Every interaction, every state, every pixel is deliberate.
@@ -201,7 +201,7 @@ export default function Home() {
               className="grid grid-cols-2 gap-4"
             >
               {[
-                { icon: Code2, title: "Frontend", desc: "React, Next.js, Angular" },
+                { icon: Code2, title: "Frontend", desc: "React, Next.js, TypeScript" },
                 { icon: Figma, title: "UI Engineering", desc: "Figma-to-HTML, Tailwind" },
                 { icon: Terminal, title: "Architecture", desc: "Design Systems, Monorepos" },
                 { icon: Smartphone, title: "Responsive", desc: "Mobile-first, Accessible" },
@@ -244,8 +244,8 @@ export default function Home() {
                 company: "10Pearls",
                 role: "Staff UX Consultant",
                 period: "Present",
-                description: "Building scalable enterprise applications using React.js, Next.js, and Angular. Developing reusable component systems and shared UI libraries while collaborating closely with UX and product teams. Focusing on frontend performance optimization and accessibility across enterprise dashboards and management systems.",
-                highlights: ["React.js", "Next.js", "Angular", "Design Systems", "Enterprise Dashboards"]
+                description: "Building scalable enterprise applications using React.js and Next.js. Developing reusable component systems and shared UI libraries while collaborating closely with UX and product teams. Focusing on frontend performance optimization and accessibility across enterprise dashboards and management systems.",
+                highlights: ["React.js", "Next.js", "TypeScript", "Design Systems", "Enterprise Dashboards"]
               },
               {
                 company: "Creative Chaos",
@@ -472,7 +472,7 @@ export default function Home() {
               {
                 title: "Frontend Frameworks",
                 icon: Layers,
-                skills: ["React.js", "Next.js", "Angular", "TypeScript", "JavaScript ES6+", "Redux Toolkit"]
+                skills: ["React.js", "Next.js", "TypeScript", "JavaScript ES6+", "Redux Toolkit", "Zustand"]
               },
               {
                 title: "UI Engineering",
