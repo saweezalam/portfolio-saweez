@@ -24,7 +24,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   RoadTechThumbnail,
-  AppraisalThumbnail,
   VqcThumbnail,
   EngelVolkersThumbnail,
   NetstreitThumbnail,
@@ -350,13 +349,6 @@ export default function Home() {
                 Thumbnail: VqcThumbnail
               },
               {
-                title: "Home Appraisal System",
-                desc: "Performance-optimized Angular SPA for real estate appraisal review and management.",
-                tech: ["Angular", "MUI", "SCSS"],
-                url: null,
-                Thumbnail: AppraisalThumbnail
-              },
-              {
                 title: "Engel & Völkers",
                 desc: "Custom design system and responsive frontend for a global luxury real estate brand.",
                 tech: ["Next.js", "Styled Components", "Next Image"],
@@ -393,22 +385,22 @@ export default function Home() {
               },
               {
                 title: "NBP Funds",
-                desc: "Mutual fund investment platform with NAV tracking, portfolio management and fund performance.",
-                tech: ["React.js", "WordPress", "ACF"],
+                desc: "Custom WordPress theme for a mutual fund investment platform — built with ACF, Flexbox layouts, and modular SCSS architecture.",
+                tech: ["WordPress", "ACF", "Custom Theme", "Flexbox", "SCSS"],
                 url: "https://www.nbpfunds.com/",
                 Thumbnail: NbpFundsThumbnail
               },
               {
                 title: "ABL Asset Management",
-                desc: "Digital investment platform for ABL mutual funds with fund listings and performance data.",
-                tech: ["React.js", "SCSS", "Bootstrap"],
+                desc: "Bespoke WordPress theme for ABL AMC with custom ACF field groups, Flexbox-driven layouts, and component-level SCSS.",
+                tech: ["WordPress", "ACF", "Custom Theme", "Flexbox", "SCSS"],
                 url: "https://www.ablfunds.com/",
                 Thumbnail: AblFundsThumbnail
               },
               {
                 title: "Adamjee Life Insurance",
-                desc: "Insurance product showcase with policy management features and customer-facing digital experience.",
-                tech: ["React.js", "Bootstrap", "SCSS"],
+                desc: "Custom WordPress theme for an insurance platform — ACF-powered content management, Flexbox structure, and scalable SCSS.",
+                tech: ["WordPress", "ACF", "Custom Theme", "Flexbox", "SCSS"],
                 url: "https://www.adamjeelife.com/",
                 Thumbnail: AdamjeeThumbnail
               },
