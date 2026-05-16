@@ -17,7 +17,8 @@ import {
   Layers,
   Zap,
   MessageSquareQuote,
-  GitBranch
+  GitBranch,
+  Users
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -489,6 +490,11 @@ export default function Home() {
                 title: "Version Control",
                 icon: GitBranch,
                 skills: ["GitHub", "GitLab", "Bitbucket", "Git", "Pull Requests", "Code Review"]
+              },
+              {
+                title: "UX Consulting",
+                icon: Users,
+                skills: ["UX Audits", "Heuristic Evaluation", "Figma Reviews", "Design Handoff", "Stakeholder Alignment", "User Flows", "Wireframing", "Accessibility Review"]
               }
             ].map((category, i) => (
               <motion.div
