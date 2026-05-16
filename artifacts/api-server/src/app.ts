@@ -1,8 +1,11 @@
 import express, { type Express, type Request, type Response } from "express";
 import cors from "cors";
-import pinoHttp from "pino-http";
+import pinoHttpModule from "pino-http";
 import router from "./routes";
 import { logger } from "./lib/logger";
+
+// Handle both ESM and CommonJS exports from pino-http
+const pinoHttp = (pinoHttpModule as any).default || pinoHttpModule;
 
 const app: Express = express();
 
