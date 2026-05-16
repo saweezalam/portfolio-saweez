@@ -16,7 +16,8 @@ import {
   Sun,
   Layers,
   Zap,
-  MessageSquareQuote
+  MessageSquareQuote,
+  GitBranch
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -472,7 +473,7 @@ export default function Home() {
               {
                 title: "Frontend Frameworks",
                 icon: Layers,
-                skills: ["React.js", "Next.js", "TypeScript", "JavaScript ES6+", "Redux Toolkit", "Zustand"]
+                skills: ["React.js", "Next.js", "TypeScript", "JavaScript ES6+", "Redux Toolkit", "Context API", "React Router", "REST API"]
               },
               {
                 title: "UI Engineering",
@@ -482,7 +483,12 @@ export default function Home() {
               {
                 title: "Testing & Tools",
                 icon: Zap,
-                skills: ["Jest", "GitHub Copilot", "GitHub", "Jira", "Vercel", "Firebase"]
+                skills: ["Jest", "GitHub Copilot", "Jira", "Vercel", "Firebase"]
+              },
+              {
+                title: "Version Control",
+                icon: GitBranch,
+                skills: ["GitHub", "GitLab", "Bitbucket", "Git", "Pull Requests", "Code Review"]
               }
             ].map((category, i) => (
               <motion.div
