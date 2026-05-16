@@ -29,7 +29,7 @@ import {
   NetstreitThumbnail,
   NovoNordiskThumbnail
 } from "@/components/project-thumbnails";
-import { ProfileAvatar } from "@/components/profile-avatar";
+import profilePhoto from "@assets/DSC_6868_1778927043028.JPG";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -101,7 +101,19 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             className="order-first lg:order-last lg:ml-auto shrink-0"
           >
-            <ProfileAvatar className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72" />
+            <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
+              {/* Glow ring */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-blue-500/20 blur-2xl scale-110 animate-pulse" />
+              {/* Photo */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border border-primary/20 shadow-[0_0_60px_rgba(0,180,216,0.15)]">
+                <img
+                  src={profilePhoto}
+                  alt="Saweez Alam"
+                  className="w-full h-full object-cover object-top"
+                  data-testid="img-profile"
+                />
+              </div>
+            </div>
           </motion.div>
 
           <motion.div 
