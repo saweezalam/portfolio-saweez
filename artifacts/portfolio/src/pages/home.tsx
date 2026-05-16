@@ -15,13 +15,19 @@ import {
   Sun,
   Layers,
   Zap,
-  Layout,
   MessageSquareQuote
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  RoadTechThumbnail,
+  AppraisalThumbnail,
+  EngelVolkersThumbnail,
+  NetstreitThumbnail,
+  NovoNordiskThumbnail
+} from "@/components/project-thumbnails";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -116,7 +122,7 @@ export default function Home() {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-base bg-background/50 backdrop-blur-sm" data-testid="button-hero-resume" asChild>
-                <a href="#resume">
+                <a href="/resume.pdf" download="Saweez-Alam-Resume.pdf">
                   <Download className="mr-2 w-4 h-4" />
                   Resume
                 </a>
@@ -273,31 +279,36 @@ export default function Home() {
                 title: "RoadTech Dashboard Portal",
                 desc: "Monorepo architecture with Admin, OEM, and Dealer portals for an automotive equipment management platform.",
                 tech: ["React.js", "TypeScript", "Material UI", "SCSS"],
-                featured: true
+                featured: true,
+                Thumbnail: RoadTechThumbnail
               },
               {
                 title: "Home Appraisal System",
                 desc: "Performance optimized SPA for real estate appraisal review and management.",
                 tech: ["Angular", "MUI", "SCSS"],
-                featured: false
+                featured: false,
+                Thumbnail: AppraisalThumbnail
               },
               {
                 title: "Engel & Völkers",
                 desc: "Custom design system and responsive frontend for global real estate platform.",
                 tech: ["Next.js", "Styled Components"],
-                featured: false
+                featured: false,
+                Thumbnail: EngelVolkersThumbnail
               },
               {
                 title: "NETSTREIT",
                 desc: "Mobile-first real estate frontend with complex data visualizations.",
                 tech: ["React.js", "Gatsby", "Bootstrap"],
-                featured: false
+                featured: false,
+                Thumbnail: NetstreitThumbnail
               },
               {
                 title: "Novo Nordisk Sample Management",
                 desc: "Healthcare dashboard interfaces for sample management systems.",
                 tech: ["React.js", "Bootstrap"],
-                featured: false
+                featured: false,
+                Thumbnail: NovoNordiskThumbnail
               }
             ].map((project, i) => (
               <motion.div
@@ -311,11 +322,11 @@ export default function Home() {
                 <Card className="group h-full overflow-hidden bg-card/30 border-white/5 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] cursor-pointer">
                   <CardContent className="p-0 flex flex-col h-full">
                     <div className={`bg-muted/20 w-full relative overflow-hidden ${project.featured ? 'h-64 lg:h-96' : 'h-56'}`}>
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <Layout className="w-16 h-16 text-muted-foreground/20 group-hover:scale-110 group-hover:text-primary/30 transition-all duration-500" />
+                      <div className="absolute inset-0 scale-100 group-hover:scale-105 transition-transform duration-700">
+                        <project.Thumbnail />
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-90" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
                     </div>
                     <div className="p-8 relative flex-1 flex flex-col">
                       <div className="absolute top-0 right-8 -translate-y-1/2 w-12 h-12 bg-background border border-border rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:-translate-y-3/4 transition-all duration-300 shadow-xl">
