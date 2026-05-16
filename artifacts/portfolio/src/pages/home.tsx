@@ -4,7 +4,8 @@ import {
   ArrowRight, 
   Github, 
   Linkedin, 
-  Mail, 
+  Mail,
+  PhoneCall,
   Download, 
   ExternalLink,
   Terminal,
@@ -28,6 +29,7 @@ import {
   NetstreitThumbnail,
   NovoNordiskThumbnail
 } from "@/components/project-thumbnails";
+import { ProfileAvatar } from "@/components/profile-avatar";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -91,11 +93,22 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto z-10 relative">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
+          {/* Profile avatar - right side on desktop, top on mobile */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            className="order-first lg:order-last lg:ml-auto shrink-0"
+          >
+            <ProfileAvatar className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72" />
+          </motion.div>
+
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={stagger}
-            className="max-w-4xl"
+            className="max-w-3xl"
           >
             <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-6">
               <span className="relative flex h-3 w-3">
@@ -129,6 +142,7 @@ export default function Home() {
               </Button>
             </motion.div>
           </motion.div>
+          </div>
         </div>
       </section>
 
@@ -154,10 +168,10 @@ export default function Home() {
                   <a href="https://github.com/saweez" target="_blank" rel="noreferrer"><Github className="w-5 h-5" /></a>
                 </Button>
                 <Button variant="ghost" size="icon" className="rounded-full border border-border hover:bg-card" asChild data-testid="link-linkedin">
-                  <a href="https://linkedin.com/in/saweez-alam" target="_blank" rel="noreferrer"><Linkedin className="w-5 h-5" /></a>
+                  <a href="https://linkedin.com/in/saweez-alam/" target="_blank" rel="noreferrer"><Linkedin className="w-5 h-5" /></a>
                 </Button>
                 <Button variant="ghost" size="icon" className="rounded-full border border-border hover:bg-card" asChild data-testid="link-email">
-                  <a href="mailto:saweez@example.com"><Mail className="w-5 h-5" /></a>
+                  <a href="mailto:saweezalam90@gmail.com"><Mail className="w-5 h-5" /></a>
                 </Button>
               </div>
             </motion.div>
@@ -521,17 +535,23 @@ export default function Home() {
               Open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
-              <Button size="lg" className="h-14 text-base rounded-full px-8 w-full sm:w-auto group" data-testid="button-contact-email" asChild>
-                <a href="mailto:saweez@example.com">
-                  Say Hello
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row justify-center gap-4 flex-wrap max-w-2xl mx-auto">
+              <Button size="lg" className="h-14 text-base rounded-full px-8 group" data-testid="button-contact-email" asChild>
+                <a href="mailto:saweezalam90@gmail.com">
+                  <Mail className="mr-2 w-4 h-4" />
+                  saweezalam90@gmail.com
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="h-14 text-base rounded-full px-8 w-full sm:w-auto bg-background/50" data-testid="button-contact-linkedin" asChild>
-                <a href="https://linkedin.com/in/saweez-alam" target="_blank" rel="noreferrer">
+              <Button variant="outline" size="lg" className="h-14 text-base rounded-full px-8 bg-background/50" data-testid="button-contact-phone" asChild>
+                <a href="tel:+923362164269">
+                  <PhoneCall className="mr-2 w-4 h-4" />
+                  +92 336-2164269
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="h-14 text-base rounded-full px-8 bg-background/50" data-testid="button-contact-linkedin" asChild>
+                <a href="https://linkedin.com/in/saweez-alam/" target="_blank" rel="noreferrer">
                   <Linkedin className="mr-2 w-4 h-4" />
-                  Connect
+                  LinkedIn
                 </a>
               </Button>
             </div>
@@ -546,7 +566,7 @@ export default function Home() {
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Saweez Alam. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="https://github.com/saweez" className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-card rounded-full"><Github className="w-5 h-5" /></a>
-            <a href="https://linkedin.com/in/saweez-alam" className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-card rounded-full"><Linkedin className="w-5 h-5" /></a>
+            <a href="https://linkedin.com/in/saweez-alam/" className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-card rounded-full"><Linkedin className="w-5 h-5" /></a>
           </div>
         </div>
       </footer>
