@@ -1,0 +1,163 @@
+Create a premium modern portfolio website for Saweez Alam — a Staff UX Consultant & Frontend Engineer with 8+ years of experience in React.js, Next.js, Angular, TypeScript, and scalable enterprise frontend architecture.
+
+Tech Stack:
+
+* Next.js (latest App Router)
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* React Icons
+* Shadcn UI
+
+Design Requirements:
+
+* Dark modern UI
+* Apple-inspired minimal aesthetic
+* Bento grid layout
+* Smooth page transitions
+* Premium animations
+* Large bold typography
+* Glassmorphism effects
+* Fully responsive
+* Silicon Valley style portfolio
+* High-end developer branding
+
+Portfolio Owner:
+Name: Saweez Alam
+
+Professional Title:
+Staff UX Consultant & Frontend Engineer
+
+Location:
+Karachi, Pakistan
+
+About Section:
+I’m a Staff UX Consultant and Frontend Engineer with 8+ years of experience building scalable enterprise applications and modern digital experiences using React.js, Next.js, Angular, and TypeScript. Specialized in translating Figma designs into pixel-perfect responsive interfaces with strong focus on UX, accessibility, component architecture, and performance optimization.
+
+Experience Section:
+
+1. 10Pearls — Staff UX Consultant
+
+* Built scalable enterprise applications using React.js, Next.js, and Angular
+* Developed reusable component systems and shared UI libraries
+* Collaborated closely with UX and product teams
+* Converted Figma designs into production-ready interfaces
+* Focused on frontend performance optimization and accessibility
+* Worked on enterprise dashboards and management systems
+
+2. Creative Chaos — UI Developer
+
+* Developed responsive web applications and enterprise interfaces
+* Worked with React.js, SCSS, Bootstrap, and frontend integrations
+* Built scalable UI components and responsive layouts
+* Maintained cross-browser compatibility and mobile responsiveness
+
+Featured Projects:
+
+1. RoadTech Dashboard Portal
+   Business Overview:
+   RoadTech is a digital platform that streamlines operations and communication between manufacturers (OEMs), dealers, and administrators within the automotive and equipment management industry.
+
+Responsibilities:
+
+* Developed Admin, OEM, and Dealer dashboard portals
+* Used React.js, TypeScript, Material UI, and custom SCSS
+* Implemented scalable monorepo architecture
+* Created shared reusable UI components for all portals
+* Improved component reusability and maintainability
+* Wrote unit test cases using Jest
+* Used GitHub Copilot to accelerate development workflows
+* Focused on enterprise-grade frontend architecture and UX
+
+2. Home Appraisal Review & Management System
+
+* Built scalable Angular SPA
+* Developed custom UI components using MUI and SCSS
+* Worked on performance optimization
+* Conducted code reviews and maintained coding standards
+* Managed tasks using Jira
+
+3. Engel & Völkers
+
+* Styled Next.js components using Styled Components
+* Created custom design system and themes
+* Improved UX and frontend consistency
+* Optimized images using Next Image
+
+4. NETSTREIT
+
+* Developed mobile-first frontend using React.js, Gatsby, Bootstrap, and SCSS
+* Implemented responsive layouts and reusable components
+
+5. Novo Nordisk Sample Management System
+
+* Built dashboard interfaces using React.js and Bootstrap
+
+Skills Section:
+
+Frontend:
+
+* React.js
+* Next.js
+* Angular
+* TypeScript
+* JavaScript ES6+
+* Redux Toolkit
+
+UI Engineering:
+
+* Figma to HTML
+* Material UI
+* Tailwind CSS
+* SCSS
+* Styled Components
+* Responsive Design
+* Design Systems
+* Accessibility
+
+Testing & Tools:
+
+* Jest
+* GitHub Copilot
+* GitHub
+* Jira
+* Vercel
+* Firebase
+
+Portfolio Sections:
+
+1. Hero Section
+2. About Me
+3. Experience Timeline
+4. Featured Projects
+5. Skills & Technologies
+6. Design to Development Workflow
+7. Testimonials
+8. Contact Section
+9. Footer
+
+Special Features:
+
+* Animated hero section
+* Sticky navbar
+* Scroll animations
+* Interactive project cards
+* Dark/light mode toggle
+* Download resume button
+* GitHub and LinkedIn integration
+* SEO optimization
+* Clean folder architecture
+* Reusable TypeScript components
+* Performance optimized code
+* Skeleton loaders and hover animations
+
+Additional Instructions:
+
+* Make the UI visually impressive and recruiter-friendly
+* Use reusable components throughout the project
+* Follow scalable frontend architecture principles
+* Add smooth micro-interactions
+* Include subtle animation effects using Framer Motion
+* Generate production-ready clean code
+* Create premium UI similar to top frontend engineers portfolios
+* Ensure accessibility and responsive design best practices
